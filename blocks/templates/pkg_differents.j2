@@ -1,27 +1,84 @@
 <html>
-<h> report of different pkgs </h>
+<h3  style="text-align: center"> The Report of different packges</h3>
+<style>
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #dee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+
+</style>
 <table>
 <tr>
 <td> Hostname </td>
-<td> pkg different from other hosts </td>
-</tr>
-<tr>
 {% for i in ansible_play_hosts %}
   <td> {{ i }} </td>
 {% endfor %}
-
 </tr>
+
+
+<tr>
+ <td> number of installed pkg </td>
+ {% for ip in ansible_play_hosts %}
+  <td> {{ hostvars[ip]['ansible_facts']['packages']|length }} </td>
+ {% endfor %}
+ </tr>
+
+
+<tr>
+  <td> number of missing/different pkg </td>
+  {% for i in ansible_play_hosts %}
+    {% set ulist=union_list|difference( hostvars[i]['List' + i] ) %}
+    <td style="vertical-align:top">  {{ ulist |length }} </td>
+  {% endfor %}
+</tr>
+
+
+
+<tr>
+<td style="vertical-align:top"> missing/different pkg </td>
+
 {% for i in ansible_play_hosts %}
-<td style="vertical-align:top">
-<p>
-<pre>
+<td style="vertical-align:top"> 
+<table width="400" style="border-collapse: collapse; border: none;"> 
+
 {% set ulist=union_list|difference( hostvars[i]['List' + i] ) %}
     {% for pkg in ulist %} 
-    {{ pkg }}  
+     <tr style="border: none;"> <td style="border: none;"> {{ pkg }}  </td> </tr> 
    {% endfor %}
+</table>
 </td>
-</p>
-</pre> 
 {% endfor %}
 </tr>
 
