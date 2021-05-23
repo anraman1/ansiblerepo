@@ -3,3 +3,4 @@ tower01
 towerdb
 
 [all:vars]
+ansible_port='5432'
