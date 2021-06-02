@@ -1,0 +1,6 @@
+[tower]
+tower01
+towerdb
+
+[all:vars]
+pg_port='5432'
