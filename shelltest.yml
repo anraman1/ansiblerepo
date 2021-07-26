@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: yes
   name: test shell
   tasks:
    - name: shell task
