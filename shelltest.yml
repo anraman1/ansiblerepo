@@ -1,0 +1,10 @@
+---
+- hosts: all
+  name: test shell
+  tasks:
+   - name: shell task
+     shell: /opt/test.sh
+     register: out
+   - name: output
+     debug:
+      var: out
