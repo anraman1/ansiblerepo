@@ -1,0 +1,32 @@
+     - debug: msg="{{ item.json.name }}"
+     - name: setfact
+       set_fact:
+         job_id_launch: "{{ item.json.name }}"
+     - name: Update the template
+       uri:
+            url: "https://192.168.33.40/api/v2/job_templates/59/instance_groups/"
+            validate_certs: no
+            method: POST
+            headers:
+                  Authorization: "Bearer {{ key }}"
+                  Accept: 'application/json'
+            body_format: json
+            body:   
+              #id: {{ item.json.id }}
+              '{ "id": {{ item.json.id | int }} }'
+            status_code: 200,201,204
+       register: instance_templateupdate_result
+       delegate_to: localhost
+       run_once: yes
+     - name: lauch a job
+       uri:
+            url: "https://192.168.33.40/api/v2/job_templates/59/launch/"
+            status_code: 200,201,204
+            validate_certs: no
+            method: POST
+            headers:
+                  Authorization: "Bearer {{ key }}"
+                  Accept: 'application/json'
+       register: job_id_launch 
+       delegate_to: localhost
+       run_once: yes

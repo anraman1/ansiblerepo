@@ -1,0 +1,12 @@
+---
+- hosts: all
+  vars:
+     database: 
+       - oracle 
+       - db2 
+       - mongoDB 
+  tasks:
+    - name: List of tasks
+      include_tasks: Create_with_blocks_loops_include.yml
+      loop:  "{{ database }}"
+      when: ansible_facts['distribution'] == "CentOS" 

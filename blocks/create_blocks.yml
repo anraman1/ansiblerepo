@@ -1,0 +1,20 @@
+---
+- hosts: all
+  vars:
+     item1: 
+       -  first3
+       -  first2
+       -  first1
+  tasks:
+    - name: List of tasks 
+      debug: msg="Host IP address is {{ ansible_eth1.ipv4.address }}"
+    - name: number of packages installed
+      yum:
+       list: installed
+      register: yum_list 
+    - debug: var=yum_list.results|length
+    - name: check the services
+      command: systemctl status sshd
+      register: sshd_status
+      when: ansible_facts['distribution'] == "CentOS"
+     

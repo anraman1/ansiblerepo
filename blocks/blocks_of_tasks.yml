@@ -1,0 +1,5 @@
+---
+ 
+ - name: my First task
+   shell: "echo {{ item }} block"
+ - debug: msg="my {{ item }} blocks:"

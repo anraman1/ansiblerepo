@@ -1,0 +1,19 @@
+---
+- hosts: all
+  vars:
+    key: VrsTt7OOUI0nFnpMh9hAswyC0R0zj7
+  tasks:
+        - name: Send request to create a instance group
+          uri:
+            url: "https://192.168.33.40/api/v2/instance_groups/"
+            validate_certs: no
+            method: POST
+            headers:
+              Authorization: "Bearer {{ key }}"
+              Accept: 'application/json'
+            body:
+              name: instance4
+              policy_instance_list: [tower01]
+            body_format: json
+            register: instance_create_result
+            delegate_to: localhost

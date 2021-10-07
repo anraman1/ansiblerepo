@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+    - item: frist
+  tasks:
+    - block:
+        - name: my First task
+          shell: "echo {{ item }} block"
+        - debug: msg="my {{ item }} blocks:"
+       with_items:
+         - "{{ First }}"

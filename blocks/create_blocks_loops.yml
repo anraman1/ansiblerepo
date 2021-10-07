@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+     item1: 
+       -  first3
+       -  first2
+       -  first1
+  tasks:
+    - name: list of tasks
+      include_tasks: blocks_of_tasks.yml
+      loop: "{{ item1 }}"

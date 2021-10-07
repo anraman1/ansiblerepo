@@ -1,0 +1,26 @@
+---
+- hosts: all
+  vars:
+    key: FFsnDGoskDHA3clUVERONbOEWXvJk6
+  tasks:
+      - name: Send request to create a instance group
+        uri:
+            url: "https://192.168.33.40/api/v2/instance_groups/"
+            validate_certs: no
+            method: POST
+            headers:
+              Authorization: "Bearer {{ key }}"
+              Accept: 'application/json'
+            body:
+              name: instance13
+              policy_instance_list: [tower01]
+            body_format: json
+            status_code: 200,201
+        register: instance_create_result
+        delegate_to: localhost
+        run_once: yes
+        until: instance_create_result.status == 200 or instance_create_result.status == 201
+        retries: 5 # 720 * 5 seconds = 1hour (60*60/5)
+        delay: 5 # Every 5 seconds
+        ignore_errors: yes
+      - debug: var=instance_create_result
