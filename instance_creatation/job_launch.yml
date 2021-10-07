@@ -31,7 +31,7 @@
        delegate_to: localhost
        run_once: yes
      - wait_for:
-        timeout: 50 
+        timeout: 10 
      - name: remove instance group from template
        uri:
             url: "https://192.168.33.40/api/v2/job_templates/59/instance_groups/"
