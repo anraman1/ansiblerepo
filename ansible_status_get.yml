@@ -1,0 +1,11 @@
+---
+- name: Get the access logs staus code
+  hosts: localhost
+  vars:
+    - statuscode: 502
+  tasks:
+    - name: get the status code
+      ansible_status: 
+         statuscode: "{{ statuscode }}"
+      register: out
+    - debug: msg={{ out }}
