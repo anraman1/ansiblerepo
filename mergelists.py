@@ -12,7 +12,6 @@ from argparse import RawTextHelpFormatter
 
 def main():
 
-    import argparse
 
     parser = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
     parser.add_argument('-l',
