@@ -65,7 +65,7 @@ def main():
         elif len(List2) > len(List1):
            List3=List3+List2[len(List1)-len(List2)::]
 
-# if arg pass d ( to see the execees lenth of element )
+# if arg pass d ( to see to see the execs length of the elements )
     elif l_action == 'd':
 
         if len(List1) > len(List2):
