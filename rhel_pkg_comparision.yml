@@ -8,5 +8,4 @@
       register: installed_pkg
     - debug: var=
     - debug: 
-        msg: {{ installed_pkg.results|length }}
-        
+        msg:  installed_pkg.results|length 
