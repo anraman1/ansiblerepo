@@ -1,0 +1,8 @@
+---
+- name: Compare the pkg installed on the given host. 
+  tasks:
+    - name: Get the installed pkg
+      yum: 
+        list: installed
+        register: installed_pkg
+    - debug: var=installed_pkg
