@@ -1,5 +1,6 @@
 ---
 - name: Compare the pkg installed on the given host. 
+  hosts: all
   tasks:
     - name: Get the installed pkg
       yum: 
