@@ -5,5 +5,5 @@
     - name: Get the installed pkg
       yum: 
         list: installed
-        register: installed_pkg
+      register: installed_pkg
     - debug: var=installed_pkg
