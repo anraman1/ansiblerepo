@@ -8,6 +8,6 @@
       register: installed_pkg
     - debug: var=
     - debug: 
-        var: installed_pkg.result|length
-        
+        var: installed_pkg.results|length
+
         
