@@ -1,0 +1,75 @@
+---
+- hosts: all
+  vars:
+    - union_list: []
+    - tower02: []
+    - x: []
+    #- union_list:[]
+
+  tasks:
+    - name: Get the installed pkg
+      yum:
+        list: installed
+      register: installed_pkg
+    - debug: var=installed_pkg.results|length
+#  # - debug:
+#  #      msg:  "{{ installed_pkg.results[li].envra }}"
+#  #    loop: "{{ installed_pkg.results }}"
+#  #    loop_control:
+#  #     index_var: li
+#  #    delegate_to: localhost
+#  #    run_once: true
+    - name:
+      set_fact:
+        #x: "{{  x + [{'hostname': ansible_hostname,'rpm': installed_pkg.results[li].envra }] }}"
+         "{{ ansible_hostname }}": "{{  [ installed_pkg.results[li].envra.split(':')|last ] }}"
+      loop: "{{ installed_pkg.results }}"
+      #loop_control:
+      # ls: li
+      delegate_to: localhost
+      #run_once: true
+      #no_log: true
+    - name: msg
+      debug:
+         msg: "{{ x[0] }}"
+      #ignore_errors: true
+  #  - name: msg
+  #    debug:
+        # msg: "{{ [(item.rpm.split(':')|last)] }}"
+#         msg: "{{ x[li] }}"
+#        # msg: "{{ installed_pkg }}"
+  #    delegate_to: localhost
+  #    run_once: true
+  #    loop: "{{ x }}"
+  #    loop_control:
+  #      index_var: li
+ 
+    - name: list uniion
+      set_fact:
+        union_list: "{{ union_list|union( x ) }}"
+        #union_list: "{{ union_list|union(  [(item.rpm.split(':')|last)] ) }}"
+      delegate_to: localhost
+      #run_once: true
+      #loop: "{{ x }}"
+    - name: msg
+      debug:
+         var: union_list 
+#    - debug: msg={{ union_list }}
+#      delegate_to: localhost
+#      run_once: true
+#    - debug: msg=" this package is not installed {{ x[li][inventory_hostname] }} {{ union_list|difference(x[li].envra) }}"
+#      delegate_to: localhost
+#      run_once: true
+#      loop: "{{ installed_pkg.results }}"
+#      loop_control:
+#       index_var: li
+    - debug: msg=" this package is not installed {{ ansible_hostname }} {{ union_list|difference(x) }}"
+      delegate_to: localhost
+      #run_once: true
+      #loop: "{{ x }}"
+      #loop_control:
+      #  index_var: li
+
+    - name: msg
+      debug:
+         var: x 

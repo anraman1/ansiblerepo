@@ -1,0 +1,7 @@
+- hosts: all 
+  tasks:
+   - package_facts:
+   - debug:
+      msg: "{{ hostvars.tower02.ansible_facts.packages|
+      difference(hostvars.towerdb.ansible_facts.packages) }}"
+     run_once: true

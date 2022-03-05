@@ -13,8 +13,13 @@
        list: installed
       register: yum_list 
     - debug: var=yum_list.results|length
-    - name: check the services
-      command: systemctl status sshd
-      register: sshd_status
+    #- name: check the services
+    #  command: systemctl status sshd
+    #  register: sshd_status
       when: ansible_facts['distribution'] == "CentOS"
-     
+    - name: compare
+      set_fact: 
+        pkg_{{ ansible_hostname |trim }}: "{{ yum_list.results }}"
+    - name: debug
+      debug:
+        msg: " pkgs  {{ pkg_"{{ ansible_hostname }}" }}"

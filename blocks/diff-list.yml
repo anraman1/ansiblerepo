@@ -1,0 +1,48 @@
+---
+- hosts: all
+  vars:
+    - union_list: []
+    - tower02: []
+    - x: []
+
+  tasks:
+    - name: Get the installed pkg
+      yum:
+        list: installed
+      register: installed_pkg
+    - debug: var=installed_pkg.results|length
+    - name: set_fact
+      set_fact:
+        List{{ ansible_hostname|trim }}: []
+    - name:
+      set_fact:
+         List{{ ansible_hostname }}: "{{ lookup('vars', 'List' + ansible_hostname) + [ installed_pkg.results[li].envra.split(':')|last ] }} "
+      loop: "{{ installed_pkg.results }}"
+      loop_control:
+        index_var: li
+    - name: print
+      debug: 
+        msg: "{{ lookup('vars','List' + ansible_hostname )|length }}" 
+    - name: Union List
+      set_fact:
+        union_list: "{{ union_list | union( hostvars[item]['List' + item] ) }}" 
+      loop: "{{ ansible_play_hosts }}"
+      delegate_to: localhost
+      run_once: true 
+    - name: print
+      debug: 
+        msg: "{{ union_list| length }}" 
+      loop: "{{ ansible_play_hosts }}"
+      delegate_to: localhost
+      run_once: true 
+      #run_once: true
+    - debug: msg=" this package is not installed {{ item }} {{ union_list|difference(  hostvars[item]['List' + item]  ) }}"
+      delegate_to: localhost
+      run_once: true
+      loop: "{{ ansible_play_hosts }}"
+#      loop_control:
+#       index_var: li
+    - name: create a template
+      template:
+        src: pkg_differents.j2  
+        dest: /var/tmp/pkg_differents.html

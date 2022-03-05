@@ -1,0 +1,25 @@
+<html>
+<h> report of diffent pkgs </h>
+<table>
+<tr>
+<td> Hostname </td>
+<td> pkg different from other hosts </td>
+</tr>
+#{% for i in ansible_play_hosts %}
+ <tr>
+{% for i in ansible_play_hosts %}
+  <td> {{ i }} </td>
+{% endfor %}
+ </tr>
+
+
+#  {% set ulist=union_list|difference( hostvars[i]['List' + i] ) %}
+#    {% for pg in  ulist  %}
+#     <tr> 
+#     <td> </td>
+#     <td> {{ pg }} </td>
+#     </tr>
+#   {% endfor %}
+#{% endfor %}
+</table>
+</html>

@@ -1,0 +1,20 @@
+---
+- hosts: all
+  vars:
+    - x: [{"x": [1,2,2,3]},{"y": [2,3,4,5]},{"z": [1,2,3,4,6]}]
+    - union_list: []
+  tasks:
+    - name: list uniion
+      set_fact:
+        union_list: "{{ union_list|union(item(value) }}"
+      delegate_to: localhost
+      loop: "{{ x }}"
+    - debug: msg={{ union_list }}
+      delegate_to: localhost
+      run_once: true
+    - debug: msg=" this package is not installed {{ ansible_hostname }} {{ union_list|difference(x[li]) }}"
+      delegate_to: localhost
+      run_once: true
+      loop: "{{ x }}"
+      loop_control:
+       index_var: li
