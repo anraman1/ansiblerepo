@@ -1,6 +1,7 @@
 ---
 - hosts: all
   vars:
+    - command: paste
     - union_list: []
     - tower02: []
     - x: []
@@ -46,3 +47,14 @@
       template:
         src: pkg_differents.j2  
         dest: /var/tmp/pkg_differents.html
+    - name: create csv file
+      include_tasks: create_csv.yml 
+      with_items:
+        -  "Hostname" 
+        -  'number of installed pkg'
+        -  'number of missing pkg'
+        -  'missing pkgs'
+      run_once: true
+    - name: create reports
+      import_tasks: concate.yml
+

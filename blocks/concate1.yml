@@ -1,0 +1,35 @@
+---
+- name: concate
+  hosts: all
+  vars:
+    command: paste
+  tasks:
+     - name: concat
+       set_fact: 
+         command: "{{ command + ' '+  '/var/tmp/pkg_different' + item +'.csv'}}"
+       loop: "{{ ansible_play_hosts }}"
+       delegate_to: localhost
+     - debug: var=command 
+     - name: create report
+       shell: "{{ command }}  |tr '\t'  ','  > /var/tmp/report.csv" 
+       delegate_to: localhost
+       run_once: true
+     - name: add comma
+       replace:
+         replace: ','
+         regexp: '^' 
+         path: /var/tmp/report.csv
+       delegate_to: localhost
+       run_once: true
+     - name: insert begining
+       lineinfile:
+        path: /var/tmp/report.csv
+        line: "\n \n \n"
+        regex: '^$'
+        insertbefore: BOF
+       delegate_to: localhost
+       run_once: true
+     - name: create report
+       shell: paste /var/tmp/pkg_different.csv /var/tmp/report.cs |tr '\t'  ',' |tee /var/tmp/report.csv 
+       delegate_to: localhost
+       run_once: true

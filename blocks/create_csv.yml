@@ -1,0 +1,82 @@
+---
+   - name: check the loop variable
+     set_fact: 
+       loopvariable: []
+       loopitem: "{{ item }}"
+   - name: file status
+     stat:
+       path: /var/tmp/pkg_different.csv
+     register: file
+     #delegate_to: localhost
+   - name: Create file
+     lineinfile:
+       path: /var/tmp/pkg_different.csv
+       line: "Hostname\nnumber of installed pkg\nnumber of missing pkgs\nmissing packages"
+       create: yes
+     delegate_to: localhost
+     when: not file.stat.exists
+   - name: check the loop variable
+     set_fact: 
+       loopvariable:  "{% if  item == 'Hostname' %}{{ loopvariable + ansible_play_hosts }}{% elif item=='number of installed pkg' %}'number of installed pkg'{% elif item=='number of missing pkg'%}'number of missing pkg'{% endif %}"
+
+
+   - debug: var=loopvariable,loopitem
+    
+
+   - name: write variable in file
+     lineinfile:
+        path: /var/tmp/pkg_different.csv 
+        regex: '^({{ loopitem }}(.*)$)'
+        line: '\1, {{ item }}'
+        backrefs: yes
+     delegate_to: localhost
+     loop: "{{ ansible_play_hosts }}"
+     when: loopitem == 'Hostname' and loopvariable|type_debug == "list"
+   - name: Write pkg information
+     lineinfile: 
+       path: /var/tmp/pkg_different.csv
+       regex: '^({{ loopitem }}(.*)$)' 
+       #line:  "{{  hostvars[ ansible_hostname ]['installed_pkg']['results']|length }}" 
+       line:  "\\1, {{hostvars[item]['installed_pkg']['results']|length}}"
+       #line: '\1, {{ lookup('vars', 'installed_pkgs')|length  }}'
+       backrefs: yes
+     delegate_to: localhost
+     loop: "{{ ansible_play_hosts }}"
+     when: loopitem == 'number of installed pkg'
+   - name: Write missing pkg information
+     lineinfile: 
+       path: /var/tmp/pkg_different.csv
+       regex: '^({{ loopitem }}(.*)$)' 
+       #line:  "{{  hostvars[ ansible_h ]['installed_pkg']['results']|length }}" 
+       line:  "\\1, {% set ulist=union_list|difference( hostvars[item]['List' + item] ) %}
+                    {% for pkg in ulist %}
+                    {{ pkg }},\n
+                    {% endfor %}"
+       backrefs: yes
+     loop: "{{ ansible_play_hosts }}"
+     when: loopitem == 'missing pkgs_disabled'
+   - name: Write missing pkg information
+     lineinfile: 
+       path: /var/tmp/pkg_different{{ item }}.csv
+       regex: '^({{ loopitem }}(.*)$)' 
+       #line:  "{{  hostvars[ ansible_h ]['installed_pkg']['results']|length }}" 
+       line:  " {% set ulist=union_list|difference( hostvars[item]['List' + item] ) %}
+                    {% for pkg in ulist %}
+                    {{ pkg }}\n
+                    {% endfor %}"
+       create: yes
+     loop: "{{ ansible_play_hosts }}"
+     when: loopitem == 'missing pkgs'
+
+
+
+   - name: Write missing pkg count
+     lineinfile: 
+       path: /var/tmp/pkg_different.csv
+       regex: '^({{ loopitem }}(.*)$)' 
+       line:  "\\1, {% set ulist=union_list|difference( hostvars[item]['List' + item] ) %}
+                    {{ ulist|length }}"
+       backrefs: yes
+     loop: "{{ ansible_play_hosts }}"
+     delegate_to: localhost
+     when: loopitem == 'number of missing pkg'

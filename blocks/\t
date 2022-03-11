@@ -1,0 +1,248 @@
+Hostname, tower02, tower04, tower02, tower04	
+number of installed pkg, 481, 532, 481, 532	 
+number of missing pkg,  242,  191,  242,  191	 
+missing pkgs,	
+	,   NetworkManager-libnm-1.18.4-3.el7.x86_64,   NetworkManager-libnm-1.18.8-2.el7_9.x86_64
+	,  NetworkManager-team-1.18.4-3.el7.x86_64,  NetworkManager-team-1.18.8-2.el7_9.x86_64
+	,  NetworkManager-tui-1.18.4-3.el7.x86_64,  NetworkManager-tui-1.18.8-2.el7_9.x86_64
+	,  NetworkManager-1.18.4-3.el7.x86_64,  NetworkManager-1.18.8-2.el7_9.x86_64
+	,  ansible-test-2.9.15-1.el7ae.noarch,  ansible-tower-server-3.8.4-1.el7at.x86_64
+	,  ansible-2.9.15-1.el7ae.noarch,  ansible-tower-ui-3.8.4-1.el7at.x86_64
+	,  automation-hub-4.2.1-2.el7pc.noarch,  ansible-tower-venv-ansible-3.8.4-1.el7at.x86_64
+	,  bash-4.2.46-34.el7.x86_64,  ansible-tower-venv-tower-3.8.4-1.el7at.x86_64
+	,  bind-export-libs-9.11.4-16.P2.el7_8.2.x86_64,  ansible-tower-3.8.4-1.el7at.x86_64
+	,  binutils-2.27-43.base.el7.x86_64,  ansible-2.9.25-1.el7ae.noarch
+	,  ca-certificates-2019.2.32-76.el7_7.noarch,  apr-util-1.5.2-6.el7.x86_64
+	,  centos-release-7-8.2003.0.el7.centos.x86_64,  apr-1.4.8-7.el7.x86_64
+	,  chkconfig-1.7.4-1.el7.x86_64,  bash-4.2.46-35.el7_9.x86_64
+	,  coreutils-8.22-24.el7.x86_64,  bc-1.06.95-13.el7.x86_64
+	,  cpio-2.11-27.el7.x86_64,  bind-export-libs-9.11.4-26.P2.el7_9.8.x86_64
+	,  cpp-4.8.5-44.el7.x86_64,  binutils-2.27-44.base.el7_9.1.x86_64
+	,  cronie-anacron-1.4.11-23.el7.x86_64,  bubblewrap-0.3.3-2.el7at.x86_64
+	,  cronie-1.4.11-23.el7.x86_64,  ca-certificates-2021.2.50-72.el7_9.noarch
+	,  cups-libs-1.6.3-43.el7.x86_64,  centos-release-7-9.2009.1.el7.centos.x86_64
+	,  curl-7.29.0-57.el7.x86_64,  chkconfig-1.7.6-1.el7.x86_64
+	,  dbus-libs-1.10.24-13.el7_6.x86_64,  coreutils-8.22-24.el7_9.2.x86_64
+	,  dbus-1.10.24-13.el7_6.x86_64,  cpio-2.11-28.el7.x86_64
+	,  device-mapper-libs-1.02.164-7.el7_8.1.x86_64,  cronie-anacron-1.4.11-24.el7_9.x86_64
+	,  device-mapper-1.02.164-7.el7_8.1.x86_64,  cronie-1.4.11-24.el7_9.x86_64
+	,  dhclient-4.2.5-79.el7.centos.x86_64,  cups-libs-1.6.3-51.el7.x86_64
+	,  dhcp-common-4.2.5-79.el7.centos.x86_64,  curl-7.29.0-59.el7_9.1.x86_64
+	,  dhcp-libs-4.2.5-79.el7.centos.x86_64,  dbus-libs-1.10.24-15.el7.x86_64
+	,  dmidecode-3.2-3.el7.x86_64,  dbus-1.10.24-15.el7.x86_64
+	,  dracut-033-568.el7.x86_64,  device-mapper-libs-1.02.170-6.el7_9.5.x86_64
+	,  dwz-0.11-3.el7.x86_64,  device-mapper-1.02.170-6.el7_9.5.x86_64
+	,  e2fsprogs-libs-1.42.9-17.el7.x86_64,  dhclient-4.2.5-83.el7.centos.1.x86_64
+	,  e2fsprogs-1.42.9-17.el7.x86_64,  dhcp-common-4.2.5-83.el7.centos.1.x86_64
+	,  elfutils-default-yama-scope-0.176-4.el7.noarch,  dhcp-libs-4.2.5-83.el7.centos.1.x86_64
+	,  elfutils-libelf-0.176-4.el7.x86_64,  dmidecode-3.2-5.el7_9.1.x86_64
+	,  elfutils-libs-0.176-4.el7.x86_64,  dnf-data-4.0.9.2-2.el7_9.noarch
+	,  expat-2.1.0-11.el7.x86_64,  dnf-4.0.9.2-2.el7_9.noarch
+	,  file-libs-5.11-36.el7.x86_64,  dracut-033-572.el7.x86_64
+	,  file-5.11-36.el7.x86_64,  e2fsprogs-libs-1.42.9-19.el7.x86_64
+	,  firewalld-filesystem-0.6.3-8.el7_8.1.noarch,  e2fsprogs-1.42.9-19.el7.x86_64
+	,  firewalld-0.6.3-8.el7_8.1.noarch,  elfutils-default-yama-scope-0.176-5.el7.noarch
+	,  freetype-2.8-14.el7.x86_64,  elfutils-libelf-0.176-5.el7.x86_64
+	,  gcc-4.8.5-44.el7.x86_64,  elfutils-libs-0.176-5.el7.x86_64
+	,  glib2-2.56.1-5.el7.x86_64,  expat-2.1.0-12.el7.x86_64
+	,  glibc-devel-2.17-325.el7_9.x86_64,  file-libs-5.11-37.el7.x86_64
+	,  glibc-headers-2.17-325.el7_9.x86_64,  file-5.11-37.el7.x86_64
+	,  grub2-common-2.02-0.81.el7.centos.noarch,  firewalld-filesystem-0.6.3-13.el7_9.noarch
+	,  grub2-pc-modules-2.02-0.81.el7.centos.noarch,  firewalld-0.6.3-13.el7_9.noarch
+	,  grub2-pc-2.02-0.81.el7.centos.x86_64,  freetype-2.8-14.el7_9.1.x86_64
+	,  grub2-tools-extra-2.02-0.81.el7.centos.x86_64,  glib2-2.56.1-9.el7_9.x86_64
+	,  grub2-tools-minimal-2.02-0.81.el7.centos.x86_64,  gpg-pubkey-b2973cf6-5dfd1395.0
+	,  grub2-tools-2.02-0.81.el7.centos.x86_64,  grub2-common-2.02-0.87.el7.centos.7.noarch
+	,  grub2-2.02-0.81.el7.centos.x86_64,  grub2-pc-modules-2.02-0.87.el7.centos.7.noarch
+	,  gssproxy-0.7.0-28.el7.x86_64,  grub2-pc-2.02-0.87.el7.centos.7.x86_64
+	,  hwdata-0.252-9.5.el7.x86_64,  grub2-tools-extra-2.02-0.87.el7.centos.7.x86_64
+	,  initscripts-9.49.49-1.el7.x86_64,  grub2-tools-minimal-2.02-0.87.el7.centos.7.x86_64
+	,  iproute-4.11.0-25.el7_7.2.x86_64,  grub2-tools-2.02-0.87.el7.centos.7.x86_64
+	,  iptables-1.4.21-34.el7.x86_64,  grub2-2.02-0.87.el7.centos.7.x86_64
+	,  kbd-legacy-1.15.5-15.el7.noarch,  gssproxy-0.7.0-30.el7_9.x86_64
+	,  kbd-misc-1.15.5-15.el7.noarch,  helm-3.5.0-3.el7at.x86_64
+	,  kbd-1.15.5-15.el7.x86_64,  hwdata-0.252-9.7.el7.x86_64
+	,  kernel-headers-3.10.0-1160.45.1.el7.x86_64,  initscripts-9.49.53-1.el7_9.1.x86_64
+	,  kernel-tools-libs-3.10.0-1127.el7.x86_64,  iproute-4.11.0-30.el7.x86_64
+	,  kernel-tools-3.10.0-1127.el7.x86_64,  iptables-1.4.21-35.el7.x86_64
+	,  kpartx-0.4.9-131.el7.x86_64,  kbd-legacy-1.15.5-16.el7_9.noarch
+	,  krb5-libs-1.15.1-46.el7.x86_64,  kbd-misc-1.15.5-16.el7_9.noarch
+	,  libblkid-2.23.2-63.el7.x86_64,  kbd-1.15.5-16.el7_9.x86_64
+	,  libcom_err-1.42.9-17.el7.x86_64,  kernel-tools-libs-3.10.0-1160.49.1.el7.x86_64
+	,  libcroco-0.6.12-4.el7.x86_64,  kernel-tools-3.10.0-1160.49.1.el7.x86_64
+	,  libcurl-7.29.0-57.el7.x86_64,  kernel-3.10.0-1160.49.1.el7.x86_64
+	,  libfastjson-0.99.4-3.el7.x86_64,  kpartx-0.4.9-135.el7_9.x86_64
+	,  libldb-1.5.4-1.el7.x86_64,  krb5-libs-1.15.1-51.el7_9.x86_64
+	,  libmount-2.23.2-63.el7.x86_64,  leapp-deps-0.13.0-100.20220117095514708624.master.12.g0fc2ab3.el7.noarch
+	,  libmpc-1.0.1-3.el7.x86_64,  leapp-upgrade-el7toel8-deps-0.15.0-100.20220117141411810915.master.48.gde8e6e6.el7.noarch
+	,  libmspack-0.5-0.7.alpha.el7.x86_64,  leapp-upgrade-el7toel8-0.15.0-100.20220117141411810915.master.48.gde8e6e6.el7.noarch
+	,  libpng-1.5.13-7.el7_2.x86_64,  leapp-0.13.0-100.20220117095514708624.master.12.g0fc2ab3.el7.noarch
+	,  libsmartcols-2.23.2-63.el7.x86_64,  libblkid-2.23.2-65.el7_9.1.x86_64
+	,  libssh2-1.8.0-3.el7.x86_64,  libcgroup-tools-0.41-21.el7.x86_64
+	,  libss-1.42.9-17.el7.x86_64,  libcom_err-1.42.9-19.el7.x86_64
+	,  libstdc++-4.8.5-39.el7.x86_64,  libcomps-0.1.8-14.el7.x86_64
+	,  libteam-1.29-1.el7.x86_64,  libcroco-0.6.12-6.el7_9.x86_64
+	,  libuuid-2.23.2-63.el7.x86_64,  libcurl-7.29.0-59.el7_9.1.x86_64
+	,  libwbclient-4.10.4-10.el7.x86_64,  libdnf-0.22.5-2.el7_9.x86_64
+	,  libxml2-python-2.9.1-6.el7.4.x86_64,  libfastjson-0.99.8-2.el7at.x86_64
+	,  libxml2-2.9.1-6.el7.4.x86_64,  libldb-1.5.4-2.el7.x86_64
+	,  libxslt-1.1.28-5.el7.x86_64,  libmodman-2.0.1-8.el7.x86_64
+	,  linux-firmware-20191203-76.gite8a0f4c.el7.noarch,  libmodulemd-1.6.3-1.el7.x86_64
+	,  lshw-B.02.18-14.el7.x86_64,  libmount-2.23.2-65.el7_9.1.x86_64
+	,  lz4-1.7.5-3.el7.x86_64,  libmspack-0.5-0.8.alpha.el7.x86_64
+	,  mariadb-libs-5.5.65-1.el7.x86_64,  libnl-1.1.4-3.el7.x86_64
+	,  mpfr-3.1.1-4.el7.x86_64,  libpng-1.5.13-8.el7.x86_64
+	,  net-tools-2.0-0.25.20131004git.el7.x86_64,  libproxy-0.4.11-11.el7.x86_64
+	,  nettle-2.7.1-8.el7.x86_64,  libreport-filesystem-2.1.11-53.el7.centos.x86_64
+	,  nfs-utils-1.3.0-0.66.el7.x86_64,  librepo-1.8.1-8.el7_9.x86_64
+	,  nginx-all-modules-1.16.1-2.el7at.noarch,  libsmartcols-2.23.2-65.el7_9.1.x86_64
+	,  nginx-filesystem-1.16.1-2.el7at.noarch,  libsolv-0.6.34-4.el7.x86_64
+	,  nginx-mod-http-image-filter-1.16.1-2.el7at.x86_64,  libssh2-1.8.0-4.el7.x86_64
+	,  nginx-mod-http-perl-1.16.1-2.el7at.x86_64,  libss-1.42.9-19.el7.x86_64
+	,  nginx-mod-http-xslt-filter-1.16.1-2.el7at.x86_64,  libstdc++-4.8.5-44.el7.x86_64
+	,  nginx-mod-mail-1.16.1-2.el7at.x86_64,  libteam-1.29-3.el7.x86_64
+	,  nginx-mod-stream-1.16.1-2.el7at.x86_64,  libuuid-2.23.2-65.el7_9.1.x86_64
+	,  nginx-1.16.1-2.el7at.x86_64,  libwbclient-4.10.16-17.el7_9.x86_64
+	,  nspr-4.21.0-1.el7.x86_64,  libxml2-python-2.9.1-6.el7_9.6.x86_64
+	,  nss-softokn-freebl-3.44.0-8.el7_7.x86_64,  libxml2-2.9.1-6.el7_9.6.x86_64
+	,  nss-softokn-3.44.0-8.el7_7.x86_64,  libxslt-1.1.28-6.el7.x86_64
+	,  nss-sysinit-3.44.0-7.el7_7.x86_64,  linux-firmware-20200421-80.git78c0348.el7_9.noarch
+	,  nss-tools-3.44.0-7.el7_7.x86_64,  lshw-B.02.18-17.el7.x86_64
+	,  nss-util-3.44.0-4.el7_7.x86_64,  lz4-1.8.3-1.el7.x86_64
+	,  nss-3.44.0-7.el7_7.x86_64,  mariadb-libs-5.5.68-1.el7.x86_64
+	,  open-vm-tools-10.3.10-2.el7.x86_64,  mercurial-2.6.2-11.el7.x86_64
+	,  openldap-2.4.44-21.el7_6.x86_64,  neon-0.30.0-4.el7.x86_64
+	,  openssh-clients-7.4p1-21.el7.x86_64,  net-tools-2.0-0.52.20160912git.el8.x86_64
+	,  openssh-server-7.4p1-21.el7.x86_64,  nettle-2.7.1-9.el7_9.x86_64
+	,  openssh-7.4p1-21.el7.x86_64,  nfs-utils-1.3.0-0.68.el7.2.x86_64
+	,  openssl-libs-1.0.2k-19.el7.x86_64,  nginx-all-modules-1.16.1-3.el7at.noarch
+	,  openssl-1.0.2k-19.el7.x86_64,  nginx-filesystem-1.16.1-3.el7at.noarch
+	,  perl-srpm-macros-1-8.el7.noarch,  nginx-mod-http-image-filter-1.16.1-3.el7at.x86_64
+	,  postgresql-devel-9.2.24-7.el7_9.x86_64,  nginx-mod-http-perl-1.16.1-3.el7at.x86_64
+	,  postgresql-9.2.24-7.el7_9.x86_64,  nginx-mod-http-xslt-filter-1.16.1-3.el7at.x86_64
+	,  procps-ng-3.3.10-27.el7.x86_64,  nginx-mod-mail-1.16.1-3.el7at.x86_64
+	,  pulpcore-selinux-1.2.3-2.el7pc.x86_64,  nginx-mod-stream-1.16.1-3.el7at.x86_64
+	,  pyldb-1.5.4-1.el7.x86_64,  nginx-1.16.1-3.el7at.x86_64
+	,  python-chardet-2.2.1-3.el7.noarch,  nspr-4.32.0-1.el7_9.x86_64
+	,  python-firewall-0.6.3-8.el7_8.1.noarch,  nss-softokn-freebl-3.67.0-3.el7_9.x86_64
+	,  python-perf-3.10.0-1127.el7.x86_64,  nss-softokn-3.67.0-3.el7_9.x86_64
+	,  python-virtualenv-15.1.0-4.el7_7.noarch,  nss-sysinit-3.67.0-4.el7_9.x86_64
+	,  python3-aiodns-2.0.0-3.el7pc.noarch,  nss-tools-3.67.0-4.el7_9.x86_64
+	,  python3-aiofiles-0.6.0-1.el7pc.noarch,  nss-util-3.67.0-1.el7_9.x86_64
+	,  python3-aiohttp-3.7.2-1.el7pc.x86_64,  nss-3.67.0-4.el7_9.x86_64
+	,  python3-ansible-builder-0.2.2-1.el7pc.noarch,  open-vm-tools-11.0.5-3.el7_9.3.x86_64
+	,  python3-async-timeout-3.0.1-2.el7pc.noarch,  openldap-2.4.44-24.el7_9.x86_64
+	,  python3-attrs-19.3.0-2.el7pc.noarch,  openshift-clients-4.6.0-202105290217.p0.git.5ab7b2b.el7.x86_64
+	,  python3-backoff-1.10.0-3.el7pc.noarch,  openssh-clients-7.4p1-22.el7_9.x86_64
+	,  python3-bleach-whitelist-0.0.11-1.el7pc.noarch,  openssh-server-7.4p1-22.el7_9.x86_64
+	,  python3-bleach-3.2.1-1.el7pc.noarch,  openssh-7.4p1-22.el7_9.x86_64
+	,  python3-certifi-2020.6.20-1.el7pc.noarch,  openssl-libs-1.0.2k-22.el7_9.x86_64
+	,  python3-cffi-1.14.3-1.el7pc.x86_64,  openssl-1.0.2k-22.el7_9.x86_64
+	,  python3-chardet-3.0.4-2.el7pc.noarch,  pakchois-0.4-10.el7.x86_64
+	,  python3-click-7.1.2-1.el7pc.noarch,  procps-ng-3.3.10-28.el7.x86_64
+	,  python3-cryptography-2.9.2-1.el7pc.x86_64,  pyldb-1.5.4-2.el7.x86_64
+	,  python3-defusedxml-0.6.0-1.el7pc.noarch,  python-dateutil-1.5-7.el7.noarch
+	,  python3-devel-3.6.8-18.el7.x86_64,  python-dmidecode-3.12.2-4.el7.x86_64
+	,  python3-diff-match-patch-20200713-1.el7pc.noarch,  python-ethtool-0.8-8.el7.x86_64
+	,  python3-django-currentuser-0.5.1-1.el7pc.noarch,  python-firewall-0.6.3-13.el7_9.noarch
+	,  python3-django-filter-2.3.0-1.el7pc.noarch,  python-inotify-0.9.4-4.el7.noarch
+	,  python3-django-guardian-2.3.0-1.el7pc.noarch,  python-meld3-0.6.10-1.el7.x86_64
+	,  python3-django-import-export-2.3.0-1.el7pc.noarch,  python-perf-3.10.0-1160.49.1.el7.x86_64
+	,  python3-django-lifecycle-0.8.0-1.el7pc.noarch,  python-requests-2.6.0-10.el7.noarch
+	,  python3-django-prometheus-2.1.0-1.el7pc.noarch,  python-syspurpose-1.24.50-1.el7.centos.x86_64
+	,  python3-djangorestframework-queryfields-1.0.0-3.el7pc.noarch,  python-urllib3-1.10.2-7.el7.noarch
+	,  python3-djangorestframework-3.11.2-1.el7pc.noarch,  python-virtualenv-15.1.0-5.el7_9.noarch
+	,  python3-django-2.2.17-1.el7pc.noarch,  python2-chardet-3.0.4-10.el7ar.noarch
+	,  python3-drf-access-policy-0.7.0-1.el7pc.noarch,  python2-dnf-4.0.9.2-2.el7_9.noarch
+	,  python3-drf-nested-routers-0.91-2.el7pc.noarch,  python2-hawkey-0.22.5-2.el7_9.x86_64
+	,  python3-drf-spectacular-0.9.13-1.el7pc.noarch,  python2-leapp-0.13.0-100.20220117095514708624.master.12.g0fc2ab3.el7.noarch
+	,  python3-dynaconf-3.1.2-1.el7pc.noarch,  python2-libcomps-0.1.8-14.el7.x86_64
+	,  python3-et-xmlfile-1.0.1-1.el7pc.noarch,  python2-libdnf-0.22.5-2.el7_9.x86_64
+	,  python3-flake8-3.8.4-1.el7pc.noarch,  rh-redis5-redis-5.0.5-3.el7.x86_64
+	,  python3-galaxy-importer-0.2.12-1.el7pc.noarch,  rpm-build-libs-4.11.3-48.el7_9.x86_64
+	,  python3-galaxy-ng-4.2.1-1.el7pc.noarch,  rpm-libs-4.11.3-48.el7_9.x86_64
+	,  python3-gnupg-0.4.6-1.el7pc.noarch,  rpm-python-4.11.3-48.el7_9.x86_64
+	,  python3-gunicorn-20.0.4-2.el7pc.noarch,  rpm-4.11.3-48.el7_9.x86_64
+	,  python3-idna-ssl-1.1.0-3.el7pc.noarch,  rsyslog-8.1911.0-8.el7at.x86_64
+	,  python3-idna-2.10-1.el7pc.noarch,  samba-client-libs-4.10.16-17.el7_9.x86_64
+	,  python3-importlib-metadata-1.7.0-1.el7pc.noarch,  samba-common-libs-4.10.16-17.el7_9.x86_64
+	,  python3-inflection-0.5.1-1.el7pc.noarch,  samba-common-4.10.16-17.el7_9.noarch
+	,  python3-jdcal-1.4.1-1.el7pc.noarch,  samba-libs-4.10.16-17.el7_9.x86_64
+	,  python3-jinja2-2.11.2-1.el7pc.noarch,  sed-4.2.2-7.el7.x86_64
+	,  python3-jsonschema-3.2.0-4.el7pc.noarch,  snactor-0.13.0-100.20220117095514708624.master.12.g0fc2ab3.el7.noarch
+	,  python3-markdown-3.3.3-1.el7pc.noarch,  subscription-manager-rhsm-certificates-1.24.50-1.el7.centos.x86_64
+	,  python3-markuppy-1.14-1.el7pc.noarch,  subscription-manager-rhsm-1.24.50-1.el7.centos.x86_64
+	,  python3-markupsafe-1.1.1-2.el7pc.x86_64,  subscription-manager-1.24.50-1.el7.centos.x86_64
+	,  python3-mccabe-0.6.1-1.el7pc.noarch,  subversion-libs-1.7.14-16.el7.x86_64
+	,  python3-multidict-5.0.0-1.el7pc.x86_64,  subversion-1.7.14-16.el7.x86_64
+	,  python3-odfpy-1.4.1-2.el7pc.noarch,  sudo-1.8.23-10.el7_9.2.x86_64
+	,  python3-openpyxl-3.0.5-1.el7pc.noarch,  supervisor-3.1.4-1.el7.noarch
+	,  python3-packaging-20.4-1.el7pc.noarch,  systemd-libs-219-78.el7_9.5.x86_64
+	,  python3-prometheus-client-0.8.0-1.el7pc.noarch,  systemd-sysv-219-78.el7_9.5.x86_64
+	,  python3-psycopg2-2.8.6-1.el7pc.x86_64,  systemd-219-78.el7_9.5.x86_64
+	,  python3-pulp-ansible-0.5.5-1.el7pc.noarch,  teamd-1.29-3.el7.x86_64
+	,  python3-pulpcore-3.7.3-1.el7pc.noarch,  tuned-2.11.0-11.el7_9.noarch
+	,  python3-pyOpenSSL-19.1.0-1.el7pc.noarch,  tzdata-2021e-1.el7.noarch
+	,  python3-pycares-3.1.1-2.el7pc.x86_64,  usermode-1.111-6.el7.x86_64
+	,  python3-pycodestyle-2.6.0-1.el7pc.noarch,  util-linux-2.23.2-65.el7_9.1.x86_64
+	,  python3-pycparser-2.20-1.el7pc.noarch,  vim-minimal-7.4.629-8.el7_9.x86_64
+	,  python3-pyflakes-2.2.0-1.el7pc.noarch,  virt-what-1.18-4.el7_9.1.x86_64
+	,  python3-pygtrie-2.3.3-1.el7pc.noarch,  wpa_supplicant-2.6-12.el7_9.2.x86_64
+	,  python3-pyparsing-2.4.7-1.el7pc.noarch,  xfsprogs-4.5.0-22.el7.x86_64
+	,  python3-pyrsistent-0.17.3-1.el7pc.x86_64,  yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch
+	,  python3-pytz-2020.4-1.el7pc.noarch,  yum-utils-1.1.31-54.el7_8.noarch
+	,  python3-pyyaml-5.3.1-3.el7pc.x86_64,  yum-3.4.3-168.el7.centos.noarch
+	,  python3-redis-3.5.3-1.el7pc.noarch,  zlib-1.2.7-19.el7_9.x86_64
+	,  python3-requests-2.24.0-1.el7pc.noarch, 
+	,  python3-requirements-parser-0.2.0-1.el7pc.noarch,
+	,  python3-rpm-generators-6-2.el7.noarch,
+	,  python3-rpm-macros-3-34.el7.noarch,
+	,  python3-rq-1.5.2-1.el7pc.noarch,
+	,  python3-semantic-version-2.8.5-1.el7pc.noarch,
+	,  python3-six-1.15.0-1.el7pc.noarch,
+	,  python3-sqlparse-0.4.1-1.el7pc.noarch,
+	,  python3-tablib-2.0.0-1.el7pc.noarch,
+	,  python3-typing-extensions-3.7.4.3-1.el7pc.noarch,
+	,  python3-typing-3.7.4.3-1.el7pc.noarch,
+	,  python3-uritemplate-3.0.1-2.el7pc.noarch,
+	,  python3-urllib3-1.25.11-1.el7pc.noarch,
+	,  python3-urlman-1.3.0-2.el7pc.noarch,
+	,  python3-webencodings-0.5.1-1.el7pc.noarch,
+	,  python3-whitenoise-5.2.0-1.el7pc.noarch,
+	,  python3-xlrd-1.2.0-1.el7pc.noarch,
+	,  python3-xlwt-1.3.0-1.el7pc.noarch,
+	,  python3-yarl-1.6.2-1.el7pc.x86_64,
+	,  python3-zipp-3.4.0-2.el7pc.noarch,
+	,  redhat-rpm-config-9.1.0-88.el7.centos.noarch,
+	,  rh-postgresql10-postgresql-devel-10.17-1.el7.x86_64,
+	,  rh-redis5-redis-5.0.5-1.el7.x86_64,
+	,  rpm-build-libs-4.11.3-43.el7.x86_64,
+	,  rpm-libs-4.11.3-43.el7.x86_64,
+	,  rpm-python-4.11.3-43.el7.x86_64,
+	,  rpm-4.11.3-43.el7.x86_64,
+	,  rsyslog-8.24.0-52.el7.x86_64,
+	,  samba-client-libs-4.10.4-10.el7.x86_64,
+	,  samba-common-libs-4.10.4-10.el7.x86_64,
+	,  samba-common-4.10.4-10.el7.noarch,
+	,  samba-libs-4.10.4-10.el7.x86_64,
+	,  sed-4.2.2-6.el7.x86_64,
+	,  subscription-manager-rhsm-certificates-1.24.48-1.el7.centos.x86_64,
+	,  sudo-1.8.23-9.el7.x86_64,
+	,  systemd-libs-219-73.el7_8.5.x86_64,
+	,  systemd-sysv-219-73.el7_8.5.x86_64,
+	,  systemd-219-73.el7_8.5.x86_64,
+	,  teamd-1.29-1.el7.x86_64,
+	,  tuned-2.11.0-8.el7.noarch,
+	,  tzdata-2020a-1.el7.noarch,
+	,  util-linux-2.23.2-63.el7.x86_64,
+	,  vim-minimal-7.4.629-6.el7.x86_64,
+	,  virt-what-1.18-4.el7.x86_64,
+	,  wpa_supplicant-2.6-12.el7.x86_64,
+	,  xfsprogs-4.5.0-20.el7.x86_64,
+	,  yum-plugin-fastestmirror-1.1.31-53.el7.noarch,
+	,  yum-utils-1.1.31-53.el7.noarch,
+	,  yum-3.4.3-167.el7.centos.noarch,
+	,  zip-3.0-11.el7.x86_64,
+	,  zlib-1.2.7-18.el7.x86_64,
+	, ,
+	,

@@ -9,6 +9,14 @@
        - { "name":"d", "pkg":[1,2,4,5,6,7,3] }
     #- union_list:[]
   tasks:
+    - name: set
+      set_fact:
+        a: 1
+        c: [] 
+    - name: check rpm
+      yum: 
+       list: installed
+      register: installed_pkg
     - name: list uniion
       set_fact:
         union_list: "{{ union_list|union(item.pkg) }}"
@@ -25,4 +33,36 @@
        index_var: li
     - name: debug hostvar
       debug: var=ansible_play_hosts
-
+    - name: file status
+      stat:
+        path: /var/tmp/pkg_different1.csv
+      register: file
+    - name: Create file
+      lineinfile:
+        path: /var/tmp/pkg_different1.csv
+        line: "Hostname,\nnumber of installed pkg,\nnumber of missing pkg,\nmissing pkgs,"
+        create: yes
+      when: not file.stat.exists
+    - name: update
+      lineinfile:
+        path: /var/tmp/pkg_different1.csv
+        line: "{{ item }}, "
+      with_items:
+        - 'apple' 
+        - 'orange'
+    - name: set_variable
+      set_fact:
+         #c: "{% if a==1 %} 6 {% set b=5 %} {% endif %}"
+         c: "{% if a==1 %}{{c + ansible_play_hosts }}{% endif %}"
+    - debug: var=c
+    - name: write in file
+      lineinfile:
+        path: /var/tmp/pkg_different1.csv
+        regex: '^(Hostname(.*)$)'
+        line:  "\1, {{  hostvars[ansible_hostname]['installed_pkg']['results']|length }}"
+        #line: '\1, {{ item }}'
+        backrefs: yes
+      loop: "{{ c }}"
+    - name: msg
+      debug:
+       var: "{{  hostvars[ansible_hostname]['installed_pkg']['results']|length }}"

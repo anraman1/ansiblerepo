@@ -1,0 +1,19 @@
+---
+   - name: file status
+     stat:
+       path: /var/tmp/pkg_different.csv
+     register: file
+   - name: Create file
+     lineinfile:
+       path: /var/tmp/pkg_different.csv
+       line: "Hostname \n number of installed pkg \n number of missing pkg \n missing pkgs" 
+     when: not file.stat.exists
+   - name: check the loop variable
+     set_fact: 
+       loopvariable: {% if  item == 'Hostname' } {% set loopvariable =  ansible_play_hosts } {% endif }
+   - name: write variable in file
+     lineinfile:
+        path: /var/tmp/pkg_different.csv 
+        line: {{ item }}
+     loop: "{{ loopvariable }}"
+      

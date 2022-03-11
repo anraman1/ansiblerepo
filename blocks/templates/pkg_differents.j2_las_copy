@@ -51,7 +51,7 @@ table {
 <tr>
  <td> number of installed pkg </td>
  {% for ip in ansible_play_hosts %}
-  <td> {{ hostvars[ip]['installed_pkg']['results']|length }} </td>
+  <td> {{ hostvars[ip]['ansible_facts']['packages']|length }} </td>
  {% endfor %}
  </tr>
 
